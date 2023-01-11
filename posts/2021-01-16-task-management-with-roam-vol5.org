@@ -228,7 +228,7 @@ For you convenience, the full code is displayed below. It is also available as [
     "Return non-nil if the currently visited buffer is a note."
     (and buffer-file-name
          (string-prefix-p
-          (expand-file-name (file-name-as-directory org-roam-directory))
+          (file-truename (file-name-as-directory org-roam-directory))
           (file-name-directory buffer-file-name))))
 
   (defun vulpea-project-files ()
